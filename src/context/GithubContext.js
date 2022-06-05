@@ -15,6 +15,13 @@ export function GithubProvider({ children }) {
       type: "SET_LOADING",
     });
   }
+
+  function clearUsers() {
+    dispatch({
+      type: "CLEAR_USERS",
+    });
+  }
+
   async function searchUsers(text) {
     const params = new URLSearchParams({
       q: text,
@@ -38,6 +45,7 @@ export function GithubProvider({ children }) {
         users: state.users,
         isLoading: state.isLoading,
         searchUsers,
+        clearUsers,
       }}
     >
       {children}
