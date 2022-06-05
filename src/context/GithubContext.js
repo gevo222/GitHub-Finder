@@ -15,13 +15,20 @@ export function GithubProvider({ children }) {
       type: "SET_LOADING",
     });
   }
-  async function getUsers() {
+  async function searchUsers(text) {
+    const params = new URLSearchParams({
+      q: text,
+    });
+
     setLoading();
-    const response = await fetch("https://api.github.com/users");
-    const data = await response.json();
+    const response = await fetch(
+      `https://api.github.com/search/users?${params}`
+    );
+    console.log(params);
+    const { items } = await response.json();
     dispatch({
       type: "GET_USERS",
-      payload: data,
+      payload: items,
     });
   }
 
@@ -30,7 +37,7 @@ export function GithubProvider({ children }) {
       value={{
         users: state.users,
         isLoading: state.isLoading,
-        getUsers,
+        searchUsers,
       }}
     >
       {children}
