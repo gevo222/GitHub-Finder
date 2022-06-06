@@ -8,7 +8,7 @@ import NotFound from "./pages/NotFound";
 import { GithubProvider } from "./context/github/GithubContext";
 import { AlertProvider } from "./context/alert/AlertContext";
 import Alert from "./components/layout/Alert";
-import User from "./components/users/User";
+import User from "./pages/User";
 
 function App() {
   return (
