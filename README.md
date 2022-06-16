@@ -6,6 +6,7 @@
 * React Contexts
 * Redux
 * DaisyUI and TailWindCSS
+* Hosting on Vercel
 
 ## Summary:
 * Users can search for any Github user
