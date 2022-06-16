@@ -1,5 +1,6 @@
 # GitHub-Finder
-A Javascript and React web application built to view Github Profiles.
+* A Javascript and React web application built to view Github Profiles.
+* Access the wep app here: http://git-hub-finder-three.vercel.app/
 
 # What I Learned
 * React Contexts
